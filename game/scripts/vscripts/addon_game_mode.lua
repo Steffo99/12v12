@@ -649,9 +649,9 @@ end
 function CMegaDotaGameMode:OnGameRulesStateChange(keys)
 	local newState = GameRules:State_Get()
 
-	if newState ==  DOTA_GAMERULES_STATE_CUSTOM_GAME_SETUP then 
-		AutoTeam:Init()
-	end
+	-- if newState ==  DOTA_GAMERULES_STATE_CUSTOM_GAME_SETUP then 
+	-- 	AutoTeam:Init()
+	-- end
 
 	if newState == DOTA_GAMERULES_STATE_POST_GAME then
 		local couriers = FindUnitsInRadius( 2, Vector( 0, 0, 0 ), nil, FIND_UNITS_EVERYWHERE, DOTA_UNIT_TARGET_TEAM_BOTH, DOTA_UNIT_TARGET_COURIER, DOTA_UNIT_TARGET_FLAG_NONE, FIND_ANY_ORDER, false )
